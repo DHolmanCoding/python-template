@@ -140,3 +140,8 @@ cython_debug/
 # IDE
 venv
 
+# mypy
+.mypy_cache
+
+# PyTest
+.pytest_cache
