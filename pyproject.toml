@@ -8,10 +8,14 @@ authors = [""]
 python = "^3.8"
 
 [tool.poetry.dev-dependencies]
-black = "^19.10b0"
+black = "^20.8b1"
 pytest = "^6.0.1"
 mypy = "^0.782"
 isort = "^5.3.2"
+pre-commit = "^2.8.2"
+
+[tool.black]
+line-length = 120
 
 [build-system]
 requires = ["poetry>=0.12"]
