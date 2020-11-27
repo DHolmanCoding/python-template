@@ -41,6 +41,6 @@ RUN pip install --no-cache-dir --upgrade pip && \
     pip install poetry && \
     poetry install --no-dev
 
-COPY python-template ./python-template
+COPY python_template ./python-template
 
 ENTRYPOINT ["/bin/bash"]
