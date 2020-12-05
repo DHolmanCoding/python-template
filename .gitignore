@@ -136,12 +136,3 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
-
-# IDE
-venv
-
-# mypy
-.mypy_cache
-
-# PyTest
-.pytest_cache
