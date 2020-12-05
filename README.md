@@ -19,7 +19,7 @@ poetry add [-D] <name-of-dependency>
 
 When you are ready to run your code and have added all your dependencies, you can perform a `poetry lock` in order to
 reproducibly fix your dependency versions. This will use the pyproject.toml file to crease a poetry.lock file. Then, in
-order to run your code, you can use the following command with to set up a virtual environment and then run your code
+order to run your code, you can use the following commands to set up a virtual environment and then run your code
 within the virtual envrionment. The optional `--no-dev` flag indicates that you only wish to install core dependencies.
 ```
 poetry install [--no-dev]
