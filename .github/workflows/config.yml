@@ -1,0 +1,23 @@
+name: Python Template CI
+
+on: [push]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.8.7'
+          architecture: 'x64'
+      - name: Install Virtual Environment
+        run: |
+          sudo apt-get update
+          sudo apt-get install curl
+          curl -sSL  curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+      - name: Run Unit Tests
+        run: |
+          printenv
+          "${HOME}/.poetry/bin/poetry" install
+          "${HOME}/.poetry/bin/poetry" run pytest --cov=python_template/src python_template/tests/
