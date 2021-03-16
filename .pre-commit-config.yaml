@@ -13,6 +13,6 @@ repos:
     rev: v0.812
     hooks:
       - id: mypy
-        args: ["--strict", "--python-version", "3.9"]
+        args: ["--ignore-missing-imports", "--python-version", "3.9"]
 default_language_version:
   python: python
