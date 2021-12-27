@@ -5,15 +5,15 @@ description = ""
 authors = ["Your Name <No Email Provided>"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.9"
 
 [tool.poetry.dev-dependencies]
-black = "^20.8b1"
-pytest = "^6.0.1"
+black = "*"
+pytest = "*"
 mypy = "*"
-isort = "^5.3.2"
-pre-commit = "^2.8.2"
-pytest-cov = "^2.10.1"
+isort = "*"
+pre-commit = "*"
+pytest-cov = "*"
 
 [tool.black]
 line-length = 120
