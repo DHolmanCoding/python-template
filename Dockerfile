@@ -43,4 +43,4 @@ RUN pip install --no-cache-dir --upgrade pip && \
 
 COPY python_template ./python-template
 
-ENTRYPOINT ["/bin/bash"]
+CMD ["/bin/bash"]
