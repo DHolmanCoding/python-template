@@ -47,4 +47,3 @@ pre-commit run --all-files
 1. Add additional pre-commit hooks that could be useful to users
 2. Add documentation for each feature to help new users navigate the template better
 3. Consider PyLint or flake8 and their compatibility with Black
-4. Make a selection of circleci or github actions or both and add/test this feature
