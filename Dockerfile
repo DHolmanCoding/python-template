@@ -26,7 +26,7 @@ RUN apt-get update \
         liblzma-dev \
     && rm -rf /var/lib/apt/lists/*
 
-ENV PYTHON_VERSION=3.10.5 \
+ENV PYTHON_VERSION=3.10.8 \
     PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBTYECODE=1 \
     PYENV_ROOT="/.pyenv" \
