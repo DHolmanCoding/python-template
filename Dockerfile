@@ -1,7 +1,12 @@
 FROM ubuntu:22.04
 
 ENV LANG=C.UTF-8 \
-    DEBIAN_FRONTEND=noninteractive
+    DEBIAN_FRONTEND=noninteractive \
+    PYTHON_VERSION=3.10.8 \
+    PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBTYECODE=1 \
+    PYENV_ROOT="/.pyenv" \
+    PATH="/.pyenv/bin:/.pyenv/shims:${PATH}"
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
@@ -25,12 +30,6 @@ RUN apt-get update \
         libffi-dev \
         liblzma-dev \
     && rm -rf /var/lib/apt/lists/*
-
-ENV PYTHON_VERSION=3.10.8 \
-    PYTHONUNBUFFERED=1 \
-    PYTHONDONTWRITEBTYECODE=1 \
-    PYENV_ROOT="/.pyenv" \
-    PATH="/.pyenv/bin:/.pyenv/shims:${PATH}"
 
 RUN git clone --depth=1 https://github.com/pyenv/pyenv.git /.pyenv && \
     pyenv install ${PYTHON_VERSION} && \
