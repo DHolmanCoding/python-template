@@ -4,13 +4,8 @@ on: [push]
 
 jobs:
   build-and-test:
-    strategy:
-      fail-fast: true
-      matrix:
-        python-version: ["3.10"]
-        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ubuntu-latest
 
-    runs-on: ${{ matrix.os }}
     steps:
       - name: GitHub
         uses: actions/checkout@v3
@@ -18,12 +13,13 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install curl
+
           curl -sSL https://install.python-poetry.org | python -
           echo "${HOME}/.poetry/bin" >> ${GITHUB_PATH}
       - name: Python
         uses: actions/setup-python@v4
         with:
-          python-version: ${{ matrix.python-version }}
+          python-version: "3.10.8"
           architecture: "x64"
           cache: "poetry"
 
