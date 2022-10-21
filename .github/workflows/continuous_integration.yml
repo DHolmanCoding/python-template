@@ -6,11 +6,14 @@ jobs:
   build-and-test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v3
+      - name: GitHub Checkout
+        uses: actions/checkout@v3
+      - name: Python
+        uses: actions/setup-python@v3
         with:
-          python-version: '3.10.7'
+          python-version: '3.10.8'
           architecture: 'x64'
+
       - name: Install Virtual Environment
         run: |
           sudo apt-get update
