@@ -25,5 +25,4 @@ jobs:
       - name: Install Virtual Environment
         run: poetry install
       - name: Run Unit Tests
-        run: |
-          poetry run pytest --cov=python_template tests
+        run: poetry run pytest --cov=python_template tests
