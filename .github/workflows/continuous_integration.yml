@@ -9,18 +9,15 @@ jobs:
       - name: GitHub
         uses: actions/checkout@v3
       - name: Poetry
-        run: |
-          sudo apt-get update
-          sudo apt-get install curl
-
-          curl -sSL https://install.python-poetry.org | python -
-          echo "${HOME}/.poetry/bin" >> ${GITHUB_PATH}
+        uses: abatilo/actions-poetry@v2
+        with:
+          poetry-version: "1.2"
       - name: Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.10.8'
-          architecture: 'x64'
-          cache: 'poetry'
+          python-version: "3.10.8"
+          architecture: "x64"
+          cache: "poetry"
 
       - name: Install Virtual Environment
         run: poetry install
