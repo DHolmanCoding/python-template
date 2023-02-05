@@ -12,9 +12,9 @@ are non-essential for the production release.
 
 For each dependency you come across, make a determination on whether it
 is a core or development dependency, and add it to the pyproject.toml file from the command line using the following
-command, where the `-D` flag is to be used only for development dependencies.
+command, where the `--group dev` flag is to be used only for development dependencies.
 ```
-poetry add [-D] <name-of-dependency>
+poetry add [--group dev] <name-of-dependency>
 ```
 
 When you are ready to run your code and have added all your dependencies, you can perform a `poetry lock` in order to
