@@ -1,3 +1,6 @@
+venv:
+	poetry install
+
 hooks:
 	bash scripts/install_pre_commit_hooks.sh
 
