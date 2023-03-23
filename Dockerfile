@@ -38,7 +38,7 @@ RUN git clone --depth=1 https://github.com/pyenv/pyenv.git /.pyenv && \
 ADD pyproject.toml poetry.lock ./
 RUN pip install --no-cache-dir --upgrade pip && \
     pip install poetry && \
-    poetry install --no-dev
+    poetry install --without dev
 
 COPY python_template ./python-template
 
