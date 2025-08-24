@@ -1,1 +1,1 @@
-poetry run pre-commit run --all-files
+uv run pre-commit run --all-files

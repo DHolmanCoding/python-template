@@ -4,7 +4,7 @@ Python boilerplate to kickstart your projects in style!
 
 # Setting up Python and your Virtual Environment
 
-This project template uses Poetry in order to manage the Python dependencies that you use within the project. There are
+This project template uses [uv](https://github.com/astral-sh/uv) to manage Python dependencies. uv is a fast Python package installer and resolver written in Rust. There are
 two types of dependencies: core dependencies and development dependencies. Core dependencies are those that are required
 to be installed for the main, production release of your project or package. Development dependencies are auxiliary
 packages that are useful in aiding in providing functionality such as formatting, documentation or type-checking, but
@@ -12,18 +12,18 @@ are non-essential for the production release.
 
 For each dependency you come across, make a determination on whether it
 is a core or development dependency, and add it to the pyproject.toml file from the command line using the following
-command, where the `--group dev` flag is to be used only for development dependencies.
+command, where the `--dev` flag is to be used only for development dependencies.
 ```
-poetry add [--group dev] <name-of-dependency>
+uv add [--dev] <name-of-dependency>
 ```
 
-When you are ready to run your code and have added all your dependencies, you can perform a `poetry lock` in order to
-reproducibly fix your dependency versions. This will use the pyproject.toml file to crease a poetry.lock file. Then, in
+When you are ready to run your code and have added all your dependencies, you can perform a `uv lock` in order to
+reproducibly fix your dependency versions. This will use the pyproject.toml file to create a uv.lock file. Then, in
 order to run your code, you can use the following commands to set up a virtual environment and then run your code
-within the virtual envrionment. The optional `--no-dev` flag indicates that you only wish to install core dependencies.
+within the virtual environment. The optional `--no-dev` flag indicates that you only wish to install core dependencies.
 ```
-poetry install [--no-dev]
-poetry run <your-command>
+uv sync [--no-dev]
+uv run <your-command>
 ```
 
 # Initializing Pre-Commit Hooks
@@ -45,4 +45,4 @@ pre-commit run --all-files
 # TODO
 
 1. Add additional pre-commit hooks that could be useful to users
-2. Add documentation about how to release your package to PyPI with poetry
+2. Add documentation about how to release your package to PyPI with uv

@@ -35,10 +35,10 @@ RUN git clone --depth=1 https://github.com/pyenv/pyenv.git /.pyenv && \
     pyenv install ${PYTHON_VERSION} && \
     pyenv global ${PYTHON_VERSION}
 
-ADD pyproject.toml poetry.lock ./
+ADD pyproject.toml uv.lock ./
 RUN pip install --no-cache-dir --upgrade pip && \
-    pip install poetry && \
-    poetry install --without dev
+    pip install uv && \
+    uv sync --no-dev
 
 COPY python_template ./python-template
 

@@ -1,5 +1,5 @@
 venv:
-	poetry install
+	uv sync
 
 hooks:
 	bash scripts/install_pre_commit_hooks.sh
