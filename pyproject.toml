@@ -8,16 +8,16 @@ authors = [
 requires-python = ">=3.13"
 dependencies = []
 
-[project.optional-dependencies]
+[dependency-groups]
 dev = [
-    "black>=25.1.0",
-    "pytest>=8.4.1", 
-    "mypy>=1.17.1",
-    "isort>=6.0.1",
-    "pre-commit>=4.2.0",
-    "pytest-cov>=6.2.1",
-    "ruff>=0.12.7",
     "bandit>=1.8.6",
+    "black>=25.9.0",
+    "isort>=6.0.1",
+    "mypy>=1.18.2",
+    "pre-commit>=4.3.0",
+    "pytest>=8.4.2",
+    "pytest-cov>=7.0.0",
+    "ruff>=0.13.1",
 ]
 
 [tool.black]
