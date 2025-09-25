@@ -1,5 +1,8 @@
-venv:
+install:
 	uv sync
+
+update:
+	uv sync --upgrade
 
 hooks:
 	bash scripts/install_pre_commit_hooks.sh
