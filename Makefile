@@ -5,7 +5,7 @@ update:
 	uv sync --upgrade
 
 hooks:
-	bash scripts/install_pre_commit_hooks.sh
+	uv run pre-commit install
 
 pre:
-	bash scripts/run_pre_commit_hooks.sh
+	uv run pre-commit run --all-files
