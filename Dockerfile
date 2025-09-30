@@ -1,4 +1,4 @@
-FROM ubuntu:24.04
+FROM ubuntu:25.04
 
 ENV LANG=C.UTF-8 \
     DEBIAN_FRONTEND=noninteractive \
