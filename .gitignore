@@ -139,6 +139,7 @@ cython_debug/
 
 # IDE
 .idea
+.cursor
 
 # Pyenv
 .python-version
