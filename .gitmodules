@@ -1,0 +1,4 @@
+[submodule ".cursor"]
+	path = .cursor
+	url = git@github.com:DHolmanCoding/cursor-config.git
+	branch = master
