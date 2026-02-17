@@ -1,15 +1,15 @@
 repos:
   - repo: local
     hooks:
-      - id: black
-        name: black
-        entry: uv run black
-        language: system
-        types: [python]
-        require_serial: true
       - id: isort
         name: isort
         entry: uv run isort
+        language: system
+        types: [python]
+        require_serial: true
+      - id: black
+        name: black
+        entry: uv run black
         language: system
         types: [python]
         require_serial: true
@@ -21,17 +21,15 @@ repos:
         require_serial: true
       - id: mypy
         name: mypy
-        entry: uv run mypy
+        entry: uv run mypy python_template tests
         language: system
-        types: [python]
-        args: ["--ignore-missing-imports"]
+        pass_filenames: false
         require_serial: true
       - id: bandit
         name: bandit
         entry: uv run bandit
         language: system
         types: [python]
-        args: ["--exit-zero"]
         require_serial: true
 default_language_version:
   python: python

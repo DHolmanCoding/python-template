@@ -5,7 +5,7 @@ description = ""
 authors = [
     {name = "Your Name"}
 ]
-requires-python = ">=3.13"
+requires-python = ">=3.12"
 dependencies = []
 
 [dependency-groups]
@@ -25,12 +25,34 @@ line-length = 120
 
 [tool.isort]
 line_length = 120
-multi_line_output = 3
-include_trailing_comma = true
+profile = "black"
+skip_gitignore = true
+src_paths = ["python_template", "tests"]
+known_first_party = ["python_template"]
+filter_files = true
 
 [tool.ruff]
 line-length = 120
 fix = true
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B", "UP", "SIM", "C4", "RUF"]
+ignore = ["E203", "E501"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+warn_unreachable = true
+show_error_codes = true
+pretty = true
+
+[tool.pytest.ini_options]
+addopts = "-ra --strict-markers --strict-config --cov=python_template --cov-report=term-missing --cov-fail-under=95"
+testpaths = ["tests"]
+markers = [
+    "unit: fast, isolated unit tests",
+    "integration: tests that touch external systems",
+]
 
 [build-system]
 requires = ["hatchling"]
