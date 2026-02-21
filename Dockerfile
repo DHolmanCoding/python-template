@@ -81,20 +81,23 @@ ENV LANG=C.UTF-8 \
     PYTHONDONTWRITEBYTECODE=1
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends ca-certificates \
-    && rm -rf /var/lib/apt/lists/*
+    && apt-get install -y --no-install-recommends ca-certificates adduser \
+    && rm -rf /var/lib/apt/lists/* /var/cache/debconf/* /var/lib/dpkg/*
+
+RUN adduser --disabled-password --gecos "" appuser
 
 COPY --from=builder-prod /.pyenv/versions /.pyenv/versions
+# Trim: drop stdlib test/ and build config (static lib); keep bytecode
+RUN PYDIR=/.pyenv/versions/$(ls /.pyenv/versions | head -1) \
+    && rm -rf "$PYDIR/lib/python3.13/test" \
+    && rm -rf "$PYDIR/lib/python3.13"/config-*
 RUN ln -s /.pyenv/versions/$(ls /.pyenv/versions | head -1) /opt/python
 
-COPY --from=builder-prod /app /app
-COPY python_template /app/python_template
+COPY --from=builder-prod --chown=appuser:appuser /app /app
+COPY --chown=appuser:appuser python_template /app/python_template
 
 ENV PATH="/opt/python/bin:/app/.venv/bin:$PATH"
 WORKDIR /app
-
-RUN adduser --disabled-password --gecos "" appuser \
-    && chown -R appuser:appuser /app
 USER appuser
 
 CMD ["uv", "run", "python"]
@@ -109,18 +112,17 @@ ENV LANG=C.UTF-8 \
     PYTHONDONTWRITEBYTECODE=1
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends ca-certificates \
-    && rm -rf /var/lib/apt/lists/*
+    && apt-get install -y --no-install-recommends ca-certificates adduser \
+    && rm -rf /var/lib/apt/lists/* /var/cache/debconf/* /var/lib/dpkg/*
+
+RUN adduser --disabled-password --gecos "" appuser
 
 COPY --from=builder-fast /usr/local /usr/local
-COPY --from=builder-fast /app /app
-COPY python_template /app/python_template
+COPY --from=builder-fast --chown=appuser:appuser /app /app
+COPY --chown=appuser:appuser python_template /app/python_template
 
 ENV PATH="/usr/local/bin:/app/.venv/bin:$PATH"
 WORKDIR /app
-
-RUN adduser --disabled-password --gecos "" appuser \
-    && chown -R appuser:appuser /app
 USER appuser
 
 CMD ["uv", "run", "python"]
