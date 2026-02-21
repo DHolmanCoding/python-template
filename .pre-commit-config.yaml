@@ -1,35 +1,29 @@
 repos:
   - repo: local
     hooks:
-      - id: isort
-        name: isort
-        entry: uv run isort
+      - id: format
+        name: format
+        entry: make format
         language: system
-        types: [python]
+        pass_filenames: false
         require_serial: true
-      - id: black
-        name: black
-        entry: uv run black
+      - id: lint
+        name: lint
+        entry: make lint
         language: system
-        types: [python]
+        pass_filenames: false
         require_serial: true
-      - id: ruff
-        name: ruff
-        entry: uv run ruff check --fix
-        language: system
-        types: [python]
-        require_serial: true
-      - id: mypy
-        name: mypy
-        entry: uv run mypy python_template tests
+      - id: typecheck
+        name: typecheck
+        entry: make typecheck
         language: system
         pass_filenames: false
         require_serial: true
       - id: bandit
         name: bandit
-        entry: uv run bandit
+        entry: make bandit
         language: system
-        types: [python]
+        pass_filenames: false
         require_serial: true
 default_language_version:
   python: python

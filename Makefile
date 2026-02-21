@@ -1,4 +1,4 @@
-.PHONY: help uvi uvu hooks pre format lint typecheck test test_cov ci pt install static_analysis build bd bd-prod clean
+.PHONY: help uvi uvu hooks pre format lint typecheck bandit test test_cov ci pt install static_analysis build bd bd-prod clean
 .DEFAULT_GOAL := help
 
 help:
@@ -7,7 +7,8 @@ help:
 	@echo "  install         Install all dependencies (uv sync)"
 	@echo "  format          Format code with isort and black"
 	@echo "  lint            Check style and lint (isort, black, ruff)"
-	@echo "  typecheck       Run mypy on python_template and tests"
+	@echo "  typecheck       Run Pyre on python_template and tests"
+	@echo "  bandit          Run bandit security linter"
 	@echo "  static_analysis Run lint and typecheck"
 	@echo "  test            Run unit tests"
 	@echo "  test_cov        Run tests with coverage report"
@@ -40,6 +41,7 @@ pre:
 format:
 	uv run isort python_template tests
 	uv run black python_template tests
+	uv run ruff check . --fix
 
 lint:
 	uv run isort --check-only python_template tests
@@ -47,13 +49,16 @@ lint:
 	uv run ruff check .
 
 typecheck tc:
-	uv run mypy python_template tests
+	uv run pyre --noninteractive --log-level WARNING check
 
 test:
 	uv run pytest
 
 test_cov:
 	uv run pytest --cov=python_template --cov-report=term-missing
+
+bandit:
+	uv run bandit python_template tests
 
 static_analysis:
 	$(MAKE) lint
@@ -73,6 +78,6 @@ bd-prod:  # bd-prod = build docker production
 	docker build --target runtime-prod -t python-template:prod .
 
 clean:
-	rm -rf dist .ruff_cache .mypy_cache .pytest_cache
+	rm -rf dist .ruff_cache .pyre .pytest_cache
 	find . -type d -name __pycache__ -delete 2>/dev/null || true
 	find . -type d -name "*.egg-info" -delete 2>/dev/null || true

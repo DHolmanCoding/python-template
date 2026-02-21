@@ -13,8 +13,9 @@ dev = [
     "bandit>=1.8.6",
     "black>=25.9.0",
     "isort>=6.0.1",
-    "mypy>=1.18.2",
+    "pyre-check>=0.9.21",
     "pre-commit>=4.3.0",
+    "pyre-check>=0.9.25",
     "pytest>=8.4.2",
     "pytest-cov>=7.0.0",
     "ruff>=0.13.1",
@@ -38,13 +39,6 @@ fix = true
 [tool.ruff.lint]
 select = ["E", "F", "W", "B", "UP", "SIM", "C4", "RUF"]
 ignore = ["E203", "E501"]
-
-[tool.mypy]
-python_version = "3.12"
-strict = true
-warn_unreachable = true
-show_error_codes = true
-pretty = true
 
 [tool.pytest.ini_options]
 addopts = "-ra --strict-markers --strict-config --cov=python_template --cov-report=term-missing --cov-fail-under=95"
