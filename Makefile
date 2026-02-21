@@ -1,4 +1,4 @@
-.PHONY: help uvi uvu hooks pre format lint typecheck test test_cov ci pt install static_analysis build clean
+.PHONY: help uvi uvu hooks pre format lint typecheck test test_cov ci pt install static_analysis build bd bd-prod clean
 .DEFAULT_GOAL := help
 
 help:
@@ -12,7 +12,8 @@ help:
 	@echo "  test            Run unit tests"
 	@echo "  test_cov        Run tests with coverage report"
 	@echo "  ci              Full gate: static_analysis then test"
-	@echo "  build           Build Docker image (docker build)"
+	@echo "  bd		         Build Docker image (fast, default)"
+	@echo "  bd-prod         Build Docker image (production, PGO+LTO)"
 	@echo "  clean           Remove dist/, caches, and __pycache__"
 	@echo ""
 	@echo "  hooks           Install pre-commit hooks"
@@ -65,8 +66,11 @@ ci:
 bp:  # bp = build python
 	uv build
 
-bd:  # bd = build docker
+build bd:  # bd = build docker
 	docker build -t python-template .
+
+bd-prod:  # bd-prod = build docker production
+	docker build --target runtime-prod -t python-template:prod .
 
 clean:
 	rm -rf dist .ruff_cache .mypy_cache .pytest_cache
