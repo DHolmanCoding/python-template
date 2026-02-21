@@ -87,7 +87,7 @@ RUN apt-get update \
 RUN adduser --disabled-password --gecos "" appuser
 
 COPY --from=builder-prod /.pyenv/versions /.pyenv/versions
-# Trim: drop stdlib test/ and build config (static lib); keep bytecode
+# Trim: drop stdlib test/ and build config (static lib);
 RUN PYDIR=/.pyenv/versions/$(ls /.pyenv/versions | head -1) \
     && rm -rf "$PYDIR/lib/python3.13/test" \
     && rm -rf "$PYDIR/lib/python3.13"/config-*

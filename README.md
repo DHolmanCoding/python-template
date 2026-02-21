@@ -42,6 +42,8 @@ pre-commit run --all-files
 
 # Containerizing your package
 
+Build with `make bd` (dev/fast image) or `make bd TARGET=runtime-prod` (prod image with PGO+LTO Python).
+
 # TODO
 
 1. Add additional pre-commit hooks that could be useful to users
