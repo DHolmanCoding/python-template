@@ -67,7 +67,7 @@ bp:  # bp = build python
 	uv build
 
 build bd:  # bd = build docker
-	docker build -t python-template .
+	docker build -t python-template:dev .
 
 bd-prod:  # bd-prod = build docker production
 	docker build --target runtime-prod -t python-template:prod .
