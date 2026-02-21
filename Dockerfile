@@ -4,7 +4,8 @@ ENV LANG=C.UTF-8 \
     DEBIAN_FRONTEND=noninteractive \
     PYTHON_VERSION=3.13 \
     PYTHONUNBUFFERED=1 \
-    PYTHONDONTWRITEBTYECODE=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PYTHON_CONFIGURE_OPTS="--enable-optimizations --with-lto" \
     PYENV_ROOT="/.pyenv" \
     PATH="/.pyenv/bin:/.pyenv/shims:${PATH}"
 
@@ -32,14 +33,21 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 RUN git clone --depth=1 https://github.com/pyenv/pyenv.git /.pyenv && \
-    pyenv install ${PYTHON_VERSION} && \
+    pyenv install --verbose ${PYTHON_VERSION} && \
     pyenv global ${PYTHON_VERSION}
 
-ADD pyproject.toml uv.lock ./
+WORKDIR /app
+
+COPY pyproject.toml uv.lock ./
 RUN pip install --no-cache-dir --upgrade pip && \
     pip install uv && \
+    pyenv rehash && \
     uv sync --no-dev
 
-COPY python_template ./python-template
+COPY python_template ./python_template
 
-CMD ["/bin/bash"]
+RUN adduser --disabled-password --gecos "" appuser \
+    && chown -R appuser:appuser /app
+USER appuser
+
+CMD ["uv", "run", "python"]
