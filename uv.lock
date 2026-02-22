@@ -522,7 +522,6 @@ dev = [
     { name = "black", specifier = ">=25.9.0" },
     { name = "isort", specifier = ">=6.0.1" },
     { name = "pre-commit", specifier = ">=4.3.0" },
-    { name = "pyre-check", specifier = ">=0.9.21" },
     { name = "pyre-check", specifier = ">=0.9.25" },
     { name = "pytest", specifier = ">=8.4.2" },
     { name = "pytest-cov", specifier = ">=7.0.0" },

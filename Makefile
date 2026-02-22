@@ -66,6 +66,7 @@ static_analysis:
 
 ci:
 	$(MAKE) static_analysis
+	$(MAKE) bandit
 	$(MAKE) test_cov
 
 bp:  # bp = build python
