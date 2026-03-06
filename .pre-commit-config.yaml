@@ -7,21 +7,9 @@ repos:
         language: system
         pass_filenames: false
         require_serial: true
-      - id: lint
-        name: lint
-        entry: make lint
-        language: system
-        pass_filenames: false
-        require_serial: true
-      - id: typecheck
-        name: typecheck
-        entry: make typecheck
-        language: system
-        pass_filenames: false
-        require_serial: true
-      - id: bandit
-        name: bandit
-        entry: make bandit
+      - id: ci
+        name: ci
+        entry: make ci
         language: system
         pass_filenames: false
         require_serial: true
