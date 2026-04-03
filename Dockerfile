@@ -1,7 +1,7 @@
 # -----------------------------------------------------------------------------
 # Fast path (default): prebuilt Python, no compile
 # -----------------------------------------------------------------------------
-FROM python:3.13-slim AS builder-fast
+FROM python:3.14-slim AS builder-fast
 
 ENV LANG=C.UTF-8 \
     PYTHONUNBUFFERED=1 \
@@ -19,7 +19,7 @@ FROM ubuntu:25.10 AS builder-prod
 
 ENV LANG=C.UTF-8 \
     DEBIAN_FRONTEND=noninteractive \
-    PYTHON_VERSION=3.13 \
+    PYTHON_VERSION=3.14 \
     PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
     PYTHON_CONFIGURE_OPTS="--enable-optimizations --with-lto" \
@@ -89,8 +89,8 @@ RUN adduser --disabled-password --gecos "" appuser
 COPY --from=builder-prod /.pyenv/versions /.pyenv/versions
 # Trim: drop stdlib test/ and build config (static lib);
 RUN PYDIR=/.pyenv/versions/$(ls /.pyenv/versions | head -1) \
-    && rm -rf "$PYDIR/lib/python3.13/test" \
-    && rm -rf "$PYDIR/lib/python3.13"/config-*
+    && rm -rf "$PYDIR/lib/python3.14/test" \
+    && rm -rf "$PYDIR/lib/python3.14"/config-*
 RUN ln -s /.pyenv/versions/$(ls /.pyenv/versions | head -1) /opt/python
 
 COPY --from=builder-prod --chown=appuser:appuser /app /app

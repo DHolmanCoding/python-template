@@ -7,7 +7,7 @@
   ],
   "ignore_all_errors": [".venv", "**/pyre_check/**"],
   "strict": true,
-  "python_version": "3.13",
+  "python_version": "3.14",
   "site_package_search_strategy": "pep561",
   "workers": 4
 }
