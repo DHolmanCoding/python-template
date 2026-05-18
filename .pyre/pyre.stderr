@@ -1,0 +1,433 @@
+2026-02-20 18:55:45,607 [PID 23821] INFO No binary specified, looking for `pyre.bin` in PATH
+2026-02-20 18:55:45,607 [PID 23821] INFO Pyre binary is located at `/Users/douglasholman/PycharmProjects/python-template/.venv/bin/pyre.bin`
+2026-02-20 18:55:45,607 [PID 23821] INFO Could not determine the number of Pyre workers from configuration. Auto-set the value to 6.
+2026-02-20 18:55:45,609 [PID 23821] INFO No typeshed specified, looking for it...
+2026-02-20 18:55:45,610 [PID 23821] INFO Found: `/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed`
+2026-02-20 18:55:45,610 [PID 23821] INFO Writing arguments into /var/folders/v5/93k2_ftj2hd3gg70jpvhdnq00000gn/T/pyre_arguments_ov4jp1bq.json...
+2026-02-20 18:55:45,610 [PID 23821] DEBUG Arguments:
+{
+  "source_paths": {
+    "kind": "simple",
+    "paths": [
+      "/Users/douglasholman/PycharmProjects/python-template"
+    ]
+  },
+  "search_paths": [
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$pluggy",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$click",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$black",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$isort",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$stevedore",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$markdown_it",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$_pytest",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$marshmallow",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$platformdirs",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$filelock",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$pathspec",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$iniconfig",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$testslide",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$tomli_w",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$identify",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$dataclasses_json",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$typeguard",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$rich",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$pytest",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$mdurl",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$tomli",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$coverage",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$packaging",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$libcst",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$pytokens",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stdlib",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/ExifRead",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/PyMySQL",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/PyYAML",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/aiofiles",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/chevron",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/colorama",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/ldap3",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/mysqlclient",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/paramiko",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/psycopg2",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/pycurl",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/python-dateutil",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/pytz",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/regex",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/requests",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/retry",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/tqdm",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/ujson"
+  ],
+  "excludes": [
+    "\\.venv/.*",
+    "\\.git/.*",
+    ".*/__pycache__/.*"
+  ],
+  "checked_directory_allowlist": [
+    "/Users/douglasholman/PycharmProjects/python-template"
+  ],
+  "checked_directory_blocklist": [],
+  "extensions": [],
+  "log_path": "/Users/douglasholman/PycharmProjects/python-template/.pyre",
+  "global_root": "/Users/douglasholman/PycharmProjects/python-template",
+  "debug": false,
+  "python_version": {
+    "major": 3,
+    "minor": 13,
+    "micro": 0
+  },
+  "system_platform": "darwin",
+  "shared_memory": {},
+  "parallel": true,
+  "number_of_workers": 6,
+  "additional_logging_sections": [
+    "-progress"
+  ],
+  "show_error_traces": false,
+  "strict": true
+}
+2026-02-20 18:55:48,859 [PID 23821] PERFORMANCE  Initialized shared memory (heap size: 8589934592, dep table pow: 1, hash table pow: 26): 0.000s
+2026-02-20 18:55:48,871 [PID 23821] PERFORMANCE  Initialized multiprocessing workers (workers: 6): 0.015s
+2026-02-20 18:55:48,871 [PID 23821] INFO  Building module tracker...
+2026-02-20 18:55:48,942 [PID 23821] PERFORMANCE  Module tracker built: 0.067s
+2026-02-20 18:55:48,942 [PID 23821] PERFORMANCE  Full environment built: 0.067s
+2026-02-20 18:55:48,942 [PID 23821] INFO  Collecting all definitions...
+2026-02-20 18:55:49,513 [PID 23821] INFO <unknown>:174: SyntaxWarning: invalid escape sequence '\N'
+2026-02-20 18:55:49,513 [PID 23821] INFO <unknown>:180: SyntaxWarning: invalid escape sequence '\N'
+2026-02-20 18:55:49,712 [PID 23821] WARNING  Parser error in module `black.linegen`: CPython runtime raised a non-syntax exception
+2026-02-20 18:55:50,077 [PID 23821] WARNING <unknown>:860: SyntaxWarning: invalid escape sequence '\N'
+2026-02-20 18:55:50,299 [PID 23821] PERFORMANCE  Collected definitions (defines: 34278): 1.365s
+2026-02-20 18:55:50,300 [PID 23821] INFO  Checking 34278 functions...
+2026-02-20 18:55:57,125 [PID 23821] PERFORMANCE  Check_TypeCheck: 6.817s
+2026-02-20 18:55:57,125 [PID 23821] MEMORY  Shared memory size post-typecheck (size: 56)
+2026-02-20 18:55:57,507 [PID 23821] PERFORMANCE  Check_Postprocessing: 0.387s
+2026-02-20 18:55:57,507 [PID 23821] PERFORMANCE  Check (request kind: FullCheck): 8.640s
+2026-02-20 18:55:57,829 [PID 23821] ERROR Found 10206 type errors!
+2026-02-20 18:56:18,824 [PID 24415] INFO No binary specified, looking for `pyre.bin` in PATH
+2026-02-20 18:56:18,824 [PID 24415] INFO Pyre binary is located at `/Users/douglasholman/PycharmProjects/python-template/.venv/bin/pyre.bin`
+2026-02-20 18:56:18,824 [PID 24415] INFO Could not determine the number of Pyre workers from configuration. Auto-set the value to 6.
+2026-02-20 18:56:18,828 [PID 24415] INFO No typeshed specified, looking for it...
+2026-02-20 18:56:18,828 [PID 24415] INFO Found: `/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed`
+2026-02-20 18:56:18,830 [PID 24415] INFO Writing arguments into /var/folders/v5/93k2_ftj2hd3gg70jpvhdnq00000gn/T/pyre_arguments_41c2u5z8.json...
+2026-02-20 18:56:18,830 [PID 24415] DEBUG Arguments:
+{
+  "source_paths": {
+    "kind": "simple",
+    "paths": [
+      "/Users/douglasholman/PycharmProjects/python-template"
+    ]
+  },
+  "search_paths": [
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$pathspec",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$click",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$pluggy",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$identify",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$tomli_w",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$stevedore",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$platformdirs",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$libcst",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$coverage",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$tomli",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$_pytest",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$typeguard",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$marshmallow",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$mdurl",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$testslide",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$pytokens",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$iniconfig",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$pytest",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$filelock",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$black",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$packaging",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$dataclasses_json",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$markdown_it",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$rich",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$isort",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stdlib",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/ExifRead",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/PyMySQL",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/PyYAML",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/aiofiles",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/chevron",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/colorama",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/ldap3",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/mysqlclient",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/paramiko",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/psycopg2",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/pycurl",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/python-dateutil",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/pytz",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/regex",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/requests",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/retry",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/tqdm",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/ujson"
+  ],
+  "excludes": [
+    "\\.venv/.*",
+    "\\.git/.*",
+    ".*/__pycache__/.*"
+  ],
+  "checked_directory_allowlist": [
+    "/Users/douglasholman/PycharmProjects/python-template"
+  ],
+  "checked_directory_blocklist": [
+    "/Users/douglasholman/PycharmProjects/python-template/.venv",
+    "/Users/douglasholman/PycharmProjects/python-template/**/pyre_check/**"
+  ],
+  "extensions": [],
+  "log_path": "/Users/douglasholman/PycharmProjects/python-template/.pyre",
+  "global_root": "/Users/douglasholman/PycharmProjects/python-template",
+  "debug": false,
+  "python_version": {
+    "major": 3,
+    "minor": 13,
+    "micro": 0
+  },
+  "system_platform": "darwin",
+  "shared_memory": {},
+  "parallel": true,
+  "number_of_workers": 6,
+  "additional_logging_sections": [
+    "-progress"
+  ],
+  "show_error_traces": false,
+  "strict": true
+}
+2026-02-20 18:56:18,891 [PID 24415] PERFORMANCE  Initialized shared memory (heap size: 8589934592, dep table pow: 1, hash table pow: 26): 0.000s
+2026-02-20 18:56:18,903 [PID 24415] PERFORMANCE  Initialized multiprocessing workers (workers: 6): 0.013s
+2026-02-20 18:56:18,903 [PID 24415] INFO  Building module tracker...
+2026-02-20 18:56:18,963 [PID 24415] PERFORMANCE  Module tracker built: 0.059s
+2026-02-20 18:56:18,963 [PID 24415] PERFORMANCE  Full environment built: 0.059s
+2026-02-20 18:56:18,963 [PID 24415] INFO  Collecting all definitions...
+2026-02-20 18:56:19,049 [PID 24415] PERFORMANCE  Collected definitions (defines: 6): 0.082s
+2026-02-20 18:56:19,049 [PID 24415] INFO  Checking 6 functions...
+2026-02-20 18:56:19,354 [PID 24415] PERFORMANCE  Check_TypeCheck: 0.309s
+2026-02-20 18:56:19,355 [PID 24415] MEMORY  Shared memory size post-typecheck (size: 0)
+2026-02-20 18:56:19,404 [PID 24415] PERFORMANCE  Check_Postprocessing: 0.046s
+2026-02-20 18:56:19,404 [PID 24415] PERFORMANCE  Check (request kind: FullCheck): 0.497s
+2026-02-20 18:56:19,418 [PID 24415] ERROR Found 4 type errors!
+2026-02-20 18:56:32,654 [PID 24695] INFO No binary specified, looking for `pyre.bin` in PATH
+2026-02-20 18:56:32,655 [PID 24695] INFO Pyre binary is located at `/Users/douglasholman/PycharmProjects/python-template/.venv/bin/pyre.bin`
+2026-02-20 18:56:32,655 [PID 24695] ERROR <built-in function cpu_count_logical> returned a result with an exception set
+2026-02-20 18:56:55,539 [PID 25086] INFO No binary specified, looking for `pyre.bin` in PATH
+2026-02-20 18:56:55,539 [PID 25086] INFO Pyre binary is located at `/Users/douglasholman/PycharmProjects/python-template/.venv/bin/pyre.bin`
+2026-02-20 18:56:55,539 [PID 25086] INFO Could not determine the number of Pyre workers from configuration. Auto-set the value to 6.
+2026-02-20 18:56:55,541 [PID 25086] INFO No typeshed specified, looking for it...
+2026-02-20 18:56:55,541 [PID 25086] INFO Found: `/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed`
+2026-02-20 18:56:55,542 [PID 25086] INFO Writing arguments into /var/folders/v5/93k2_ftj2hd3gg70jpvhdnq00000gn/T/pyre_arguments_c2j6a1xo.json...
+2026-02-20 18:56:55,542 [PID 25086] DEBUG Arguments:
+{
+  "source_paths": {
+    "kind": "simple",
+    "paths": [
+      "/Users/douglasholman/PycharmProjects/python-template"
+    ]
+  },
+  "search_paths": [
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$typeguard",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$pytokens",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$tomli",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$pluggy",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$pytest",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$libcst",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$testslide",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$marshmallow",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$mdurl",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$click",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$iniconfig",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$dataclasses_json",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$filelock",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$coverage",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$_pytest",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$markdown_it",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$packaging",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$stevedore",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$tomli_w",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$black",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$pathspec",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$isort",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$identify",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$platformdirs",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$rich",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stdlib",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/ExifRead",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/PyMySQL",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/PyYAML",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/aiofiles",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/chevron",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/colorama",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/ldap3",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/mysqlclient",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/paramiko",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/psycopg2",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/pycurl",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/python-dateutil",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/pytz",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/regex",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/requests",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/retry",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/tqdm",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/ujson"
+  ],
+  "excludes": [
+    "\\.venv/.*",
+    "\\.git/.*",
+    ".*/__pycache__/.*"
+  ],
+  "checked_directory_allowlist": [
+    "/Users/douglasholman/PycharmProjects/python-template"
+  ],
+  "checked_directory_blocklist": [
+    "/Users/douglasholman/PycharmProjects/python-template/.venv",
+    "/Users/douglasholman/PycharmProjects/python-template/**/pyre_check/**"
+  ],
+  "extensions": [],
+  "log_path": "/Users/douglasholman/PycharmProjects/python-template/.pyre",
+  "global_root": "/Users/douglasholman/PycharmProjects/python-template",
+  "debug": false,
+  "python_version": {
+    "major": 3,
+    "minor": 13,
+    "micro": 0
+  },
+  "system_platform": "darwin",
+  "shared_memory": {},
+  "parallel": true,
+  "number_of_workers": 6,
+  "additional_logging_sections": [
+    "-progress"
+  ],
+  "show_error_traces": false,
+  "strict": true
+}
+2026-02-20 18:56:55,590 [PID 25086] PERFORMANCE  Initialized shared memory (heap size: 8589934592, dep table pow: 1, hash table pow: 26): 0.000s
+2026-02-20 18:56:55,602 [PID 25086] PERFORMANCE  Initialized multiprocessing workers (workers: 6): 0.015s
+2026-02-20 18:56:55,603 [PID 25086] INFO  Building module tracker...
+2026-02-20 18:56:55,665 [PID 25086] PERFORMANCE  Module tracker built: 0.064s
+2026-02-20 18:56:55,665 [PID 25086] PERFORMANCE  Full environment built: 0.064s
+2026-02-20 18:56:55,665 [PID 25086] INFO  Collecting all definitions...
+2026-02-20 18:56:55,753 [PID 25086] PERFORMANCE  Collected definitions (defines: 6): 0.080s
+2026-02-20 18:56:55,753 [PID 25086] INFO  Checking 6 functions...
+2026-02-20 18:56:56,047 [PID 25086] PERFORMANCE  Check_TypeCheck: 0.289s
+2026-02-20 18:56:56,047 [PID 25086] MEMORY  Shared memory size post-typecheck (size: 0)
+2026-02-20 18:56:56,083 [PID 25086] PERFORMANCE  Check_Postprocessing: 0.044s
+2026-02-20 18:56:56,084 [PID 25086] PERFORMANCE  Check (request kind: FullCheck): 0.479s
+2026-02-20 18:56:56,097 [PID 25086] SUCCESS No type errors found
+2026-02-20 18:58:26,899 [PID 27328] INFO No binary specified, looking for `pyre.bin` in PATH
+2026-02-20 18:58:26,899 [PID 27328] INFO Pyre binary is located at `/Users/douglasholman/PycharmProjects/python-template/.venv/bin/pyre.bin`
+2026-02-20 18:58:26,900 [PID 27328] INFO No typeshed specified, looking for it...
+2026-02-20 18:58:26,900 [PID 27328] INFO Found: `/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed`
+2026-02-20 18:58:26,901 [PID 27328] INFO Writing arguments into /var/folders/v5/93k2_ftj2hd3gg70jpvhdnq00000gn/T/pyre_arguments__z_y5ipl.json...
+2026-02-20 18:58:26,901 [PID 27328] DEBUG Arguments:
+{
+  "source_paths": {
+    "kind": "simple",
+    "paths": [
+      "/Users/douglasholman/PycharmProjects/python-template"
+    ]
+  },
+  "search_paths": [
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$click",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$typeguard",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$libcst",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$stevedore",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$filelock",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$black",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$dataclasses_json",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$pytest",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$iniconfig",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$pluggy",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$platformdirs",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$isort",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$_pytest",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$identify",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$pytokens",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$coverage",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$marshmallow",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$tomli",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$testslide",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$markdown_it",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$packaging",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$pathspec",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$rich",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$mdurl",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/python3.13/site-packages$tomli_w",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stdlib",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/ExifRead",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/PyMySQL",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/PyYAML",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/aiofiles",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/chevron",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/colorama",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/ldap3",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/mysqlclient",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/paramiko",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/psycopg2",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/pycurl",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/python-dateutil",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/pytz",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/regex",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/requests",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/retry",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/tqdm",
+    "/Users/douglasholman/PycharmProjects/python-template/.venv/lib/pyre_check/typeshed/stubs/ujson"
+  ],
+  "excludes": [
+    "\\.venv/.*",
+    "\\.git/.*",
+    ".*/__pycache__/.*"
+  ],
+  "checked_directory_allowlist": [
+    "/Users/douglasholman/PycharmProjects/python-template"
+  ],
+  "checked_directory_blocklist": [
+    "/Users/douglasholman/PycharmProjects/python-template/.venv",
+    "/Users/douglasholman/PycharmProjects/python-template/**/pyre_check/**"
+  ],
+  "extensions": [],
+  "log_path": "/Users/douglasholman/PycharmProjects/python-template/.pyre",
+  "global_root": "/Users/douglasholman/PycharmProjects/python-template",
+  "debug": false,
+  "python_version": {
+    "major": 3,
+    "minor": 13,
+    "micro": 0
+  },
+  "system_platform": "darwin",
+  "shared_memory": {},
+  "parallel": true,
+  "number_of_workers": 4,
+  "additional_logging_sections": [
+    "-progress"
+  ],
+  "show_error_traces": false,
+  "strict": true
+}
+2026-02-20 18:58:26,953 [PID 27328] PERFORMANCE  Initialized shared memory (heap size: 8589934592, dep table pow: 1, hash table pow: 26): 0.000s
+2026-02-20 18:58:26,966 [PID 27328] PERFORMANCE  Initialized multiprocessing workers (workers: 4): 0.010s
+2026-02-20 18:58:26,966 [PID 27328] INFO  Building module tracker...
+2026-02-20 18:58:27,028 [PID 27328] PERFORMANCE  Module tracker built: 0.061s
+2026-02-20 18:58:27,028 [PID 27328] PERFORMANCE  Full environment built: 0.061s
+2026-02-20 18:58:27,028 [PID 27328] INFO  Collecting all definitions...
+2026-02-20 18:58:27,103 [PID 27328] PERFORMANCE  Collected definitions (defines: 6): 0.082s
+2026-02-20 18:58:27,103 [PID 27328] INFO  Checking 6 functions...
+2026-02-20 18:58:27,396 [PID 27328] PERFORMANCE  Check_TypeCheck: 0.294s
+2026-02-20 18:58:27,396 [PID 27328] MEMORY  Shared memory size post-typecheck (size: 0)
+2026-02-20 18:58:27,456 [PID 27328] PERFORMANCE  Check_Postprocessing: 0.057s
+2026-02-20 18:58:27,457 [PID 27328] PERFORMANCE  Check (request kind: FullCheck): 0.496s
+2026-02-20 18:58:27,470 [PID 27328] SUCCESS No type errors found
+2026-02-20 18:59:29,804 [PID 28510] SUCCESS No type errors found
+2026-02-20 18:59:53,809 [PID 29336] SUCCESS No type errors found
+2026-02-20 19:14:03,442 [PID 45418] SUCCESS No type errors found
+2026-02-22 09:56:35,384 [PID 44988] SUCCESS No type errors found
+2026-02-22 09:56:53,809 [PID 45418] SUCCESS No type errors found
+2026-02-23 14:46:47,590 [PID 29839] SUCCESS No type errors found
+2026-03-06 11:45:18,327 [PID 6066] SUCCESS No type errors found
+2026-03-06 11:47:15,101 [PID 7612] SUCCESS No type errors found
+2026-03-17 12:54:07,176 [PID 7121] SUCCESS No type errors found
+2026-04-03 11:35:18,003 [PID 40135] SUCCESS No type errors found
+2026-04-03 11:38:39,572 [PID 44176] SUCCESS No type errors found
+2026-04-03 11:40:53,266 [PID 57265] SUCCESS No type errors found
+2026-04-07 11:49:51,828 [PID 49039] SUCCESS No type errors found
+2026-04-16 06:49:41,069 [PID 81893] SUCCESS No type errors found

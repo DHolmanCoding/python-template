@@ -14,7 +14,7 @@ dev = [
     "black>=25.9.0",
     "isort>=6.0.1",
     "pre-commit>=4.3.0",
-    "pyre-check>=0.9.25",
+    "pyrefly>=1.0.0",
     "pytest>=8.4.2",
     "pytest-cov>=7.0.0",
     "ruff>=0.13.1",
@@ -46,6 +46,12 @@ markers = [
     "unit: fast, isolated unit tests",
     "integration: tests that touch external systems",
 ]
+
+[tool.pyrefly]
+preset = "strict"
+python-version = "3.14"
+project-includes = ["python_template", "tests"]
+search-path = ["."]
 
 [build-system]
 requires = ["hatchling"]

@@ -7,7 +7,7 @@ help:
 	@echo "  install         Install all dependencies (uv sync)"
 	@echo "  format          Format code with isort and black"
 	@echo "  lint            Check style and lint (isort, black, ruff)"
-	@echo "  typecheck       Run Pyre on python_template and tests"
+	@echo "  typecheck       Run Pyrefly on python_template and tests"
 	@echo "  bandit          Run bandit security linter"
 	@echo "  static_analysis Run lint and typecheck"
 	@echo "  test            Run unit tests"
@@ -49,7 +49,7 @@ lint:
 	uv run ruff check .
 
 typecheck tc:
-	uv run pyre --noninteractive --log-level WARNING check
+	uv run pyrefly check
 
 test:
 	uv run pytest
@@ -79,6 +79,6 @@ bd-prod:  # bd-prod = build docker production
 	docker build --target runtime-prod -t python-template:prod .
 
 clean:
-	rm -rf dist .ruff_cache .pyre .pytest_cache
+	rm -rf dist .ruff_cache .pytest_cache
 	find . -type d -name __pycache__ -delete 2>/dev/null || true
 	find . -type d -name "*.egg-info" -delete 2>/dev/null || true
