@@ -5,8 +5,8 @@ help:
 	@echo "Usage: make [target]"
 	@echo ""
 	@echo "  install         Install all dependencies (uv sync)"
-	@echo "  format          Format code with isort and black"
-	@echo "  lint            Check style and lint (isort, black, ruff)"
+	@echo "  format          Format and fix with ruff"
+	@echo "  lint            Check style and lint with ruff"
 	@echo "  typecheck       Run Pyrefly on python_template and tests"
 	@echo "  bandit          Run bandit security linter"
 	@echo "  static_analysis Run lint and typecheck"
@@ -39,13 +39,11 @@ pre:
 	uv run pre-commit run --all-files
 
 format:
-	uv run isort python_template tests
-	uv run black python_template tests
+	uv run ruff format python_template tests
 	uv run ruff check . --fix
 
 lint:
-	uv run isort --check-only python_template tests
-	uv run black --check python_template tests
+	uv run ruff format --check python_template tests
 	uv run ruff check .
 
 typecheck tc:

@@ -11,8 +11,6 @@ dependencies = []
 [dependency-groups]
 dev = [
     "bandit>=1.8.6",
-    "black>=25.9.0",
-    "isort>=6.0.1",
     "pre-commit>=4.3.0",
     "pyrefly>=1.0.0",
     "pytest>=8.4.2",
@@ -20,24 +18,23 @@ dev = [
     "ruff>=0.13.1",
 ]
 
-[tool.black]
-line-length = 120
-
-[tool.isort]
-line_length = 120
-profile = "black"
-skip_gitignore = true
-src_paths = ["python_template", "tests"]
-known_first_party = ["python_template"]
-filter_files = true
-
 [tool.ruff]
 line-length = 120
 fix = true
+src = ["python_template", "tests"]
 
 [tool.ruff.lint]
-select = ["E", "F", "W", "B", "UP", "SIM", "C4", "RUF"]
+select = ["E", "F", "W", "B", "UP", "SIM", "C4", "RUF", "I"]
 ignore = ["E203", "E501"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["python_template"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
 
 [tool.pytest.ini_options]
 addopts = "-ra --strict-markers --strict-config --cov=python_template --cov-report=term-missing --cov-fail-under=95"
